@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{pifont} % For checkmark and cross symbols
+
+\title{153-Ding-Log}
+\author{Yunxian Ding}
+\date{Submission Date: February 6 2025}
+\begin{document}
+\maketitle
+\section{Proof practice}
+
+\subsection{Problem 1} 
+\subsubsection{Question} Give a valid sequence of inferences that solves the following Sudoku puzzle and explain why they hold.
+Table \ref{table1:data1} shows the initial Sudoku puzzle.
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|} 
+ \hline
+ 1 &  & 4 &  \\ 
+ \hline
+  &  &  &  \\  
+ \hline
+  &  &  &  \\
+ \hline
+  & 1 &  & 2 \\
+ \hline
+\end{tabular}
+\caption{Initial Sudoku Puzzle}
+\label{table1:data1}
+\end{table}
+
+\subsubsection{Answer} Table \ref{table2:data2} shows a valid sequence of inferences that solves the Sudoku puzzle. From the definition of a mini Sudoku puzzle, we say that it is valid provided no digit from 1 to 4 appears more than once in any row, any column, or any box. As we can see in Table \ref{table2:data2}, our solution meets all the requirements and therefore they hold.
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|} 
+ \hline
+ 1 & 2 & 4 & 3 \\ 
+ \hline
+ 3 & 4 & 2 & 1 \\  
+ \hline
+ 2 & 3 & 1 & 4 \\
+ \hline
+ 4 & 1 & 3 & 2 \\
+ \hline
+\end{tabular}
+\caption{Finished Sudoku Puzzle}
+\label{table2:data2}
+\end{table}
+
+\subsection{Problem 2} 
+\subsubsection{Question} I recently had some mathematician friends over for dinner. When I asked them if they all wanted dessert, my first friend said 'I don't know.' My second friend then said, “I don’t know.” My last friend said 'No', so I gave dessert to everyone who wanted it and not to those who did not. Who wanted dessert? Prove your answer.
+
+\subsubsection{Answer} My first and second friend wanted dessert. 
+
+If my first friend didn't want dessert, then they would answer "No" to my question because even if the other two wanted dessert, not all of them wanted dessert. Since my first friend actually said "I don't know.", they wanted dessert and didn't know the other two people's thoughts.
+
+If my second friend didn't want dessert, then they would answer "No" to my question because even if the other two wanted dessert, not all of them wanted dessert. Since my second friend actually said "I don't know.", they wanted dessert and didn't know the third friend's thoughts. 
+
+The third friend knew that the previous two wanted desserts from their answers(just like we did). They said "No" to my question, meaning that although the previous two wanted dessert, not all them wanted dessert because the third friend themselves didn't want dessert.
+
+\subsection{Problem 3} 
+\subsubsection{Question} When I went to the farmer’s market, I bought a bag of apples only, a bag of pears only, and a bag with both apples and pears in it. The three bags are labeled apples, pears, and mixed — but they gave me a discount because every bag was mislabeled. What is the smallest number of pieces of fruit I need to pick to know which bag is which?.
+
+\subsubsection{Answer} I only need to pick one piece of fruit from the bag labeled "mixed" to know which bag is which.
+
+Since every bag is mislabeled, the bag with the label "mixed" actually only contains apples or pears. In either cases, we can know which bag is which by picking one piece of fruit from this bag.
+
+If we get an apple from it, then we know the "mixed" bag actually contains apples. Since every bag is mislabeled, the bag with the label "pears" actually contains apples or mixed apples and pears. Now that we know the "mixed" bag contains apples, the "pears" bag must contain mixed apples and pears. Therefore the remaining "apples" bag contains pears.
+
+If we get a pear from it, then we know the "mixed" bag actually contains pears. Since every bag is mislabeled, the bag with the label "apples" actually contains pears or mixed apples and pears. Now that we know the "mixed" bag contains pears, the "apples" bag must contain mixed apples and pears. Therefore the remaining "pears" bag contains apples.
+
+\subsection{Problem 4} 
+\subsubsection{Question} Let S be a set of eleven or more binary numbers and imagine writing all of those binary numbers in decimal notation. Prove at least two elements have the same last (decimal) digit. 
+
+\subsubsection{Answer} We can use the pigeonhole principle to solve this problem. The Pigeonhole Principle states that if \(n\) objects are placed into \(m\) containers, and \(n > m\), then at least one container must contain more than one object. We can prove it using contradiction.
+
+Assume that \(n\) objects are placed into \(m\) containers. Suppose that no container has more than one object. This means each of the \(m\) containers contains at most one object. Since there are only \(m\) containers, the maximum number of objects that can be placed without violating this assumption is at most \(m\). But we are given that there are \(n > m\) objects, which means at least one of these objects must be placed in an already occupied container. This contradicts our assumption that no container has more than one object. Therefore, at least one container must contain at least two objects, proving the principle.
+
+In this case, since there are only ten possible numbers for the last (decimal) digit: \(0, 1, 2, 3, 4, 5, 6, 7, 8, 9\), but we have at least eleven binary numbers in S, the pigeonhole principle states that at least two of these numbers must share the same last decimal digit.
+
+\subsection{Problem 6} 
+\subsubsection{Question} Give a valid sequence of inferences that solves the following Murdle puzzle, and use it to prove who, where, and with what the murder was committed.
+
+\subsubsection{Answer} Chef Aubergine committed the murder with the imported Italian knife in the Caboose. From Table \ref{table3:data3}, we can see that vice president Mauve was in the locomotive with newspaper with crow-bar inside; chef Aubergine was in the caboose with imported Italian knife; philosopher Bone was in the roof with leather luggage. Since we know that the conductor had been stabbed to death, the weapon must be the Italian knife and therefore we know who and where the murder was committed too.
+
+Horizontally: V-Vice President Mauve, C-Chef Aubergine, P-Philosopher Bone, L-The Locomotive, C-The Caboose, R-The Roof;
+
+Vertically: K-Imported Italian knife, L-Leather Luggage, N-Rolled-up Newspaper With Crow-bar Inside, L-The Locomotive, C-The Caboose, R-The Roof.
+\begin{table}[h!]
+\centering
+\begin{tabular}{c|c|c|c|c|c|c} 
+  & V & C & P & L & C & R \\
+ \hline
+ k & \ding{55} & \ding{51} & \ding{55} & \ding{55} & \ding{51} & \ding{55} \\ 
+ \hline
+ L & \ding{55} & \ding{55} & \ding{51} & \ding{55} & \ding{55} & \ding{51} \\
+   \hline
+ N & \ding{51} & \ding{55} & \ding{55} & \ding{51} & \ding{55} & \ding{55} \\
+   \hline
+ L & \ding{51} & \ding{55} & \ding{55} &  &  & \\
+   \hline
+ C & \ding{55} & \ding{51} & \ding{55} &  &  & \\
+   \hline
+ R & \ding{55} & \ding{55} & \ding{51} &  &  & \\
+ \hline
+\end{tabular}
+\caption{Table to solve the Murdle}
+\label{table3:data3}
+\end{table}
+
+\end{document}
